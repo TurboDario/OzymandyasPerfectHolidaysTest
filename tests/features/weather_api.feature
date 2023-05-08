@@ -10,6 +10,7 @@ Feature: Weather API
 
     Examples:
       | city     |
+      | London   |
       | New York |
       | Málaga   |
       | Paris    |
@@ -19,13 +20,13 @@ Feature: Weather API
 
   Scenario: Test API response for an invalid city
     Given I request the weather data for "InvalidCity"
-    Then the response should have status code "401"
+    Then the response should have status code "404"
 
   Scenario Outline: Test API response time for a variable number of requests per second
     Given "<num_requests>" requests per second to the weather API for "London" should take less than "<seconds>" seconds
 
     Examples:
       | num_requests | seconds |
-      # | 1000         | 90      |
-      # | 100          | 30      |
+      | 1000         | 90      |
+      | 100          | 30      |
       | 10           | 1       |
