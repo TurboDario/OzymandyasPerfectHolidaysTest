@@ -27,8 +27,7 @@ python3 -m venv venv
 ```
 pip install -r requirements.txt
 ```
-5. Enter your API key
-Enter your API key in the config.json file.
+5. Enter your API key in the config.json file.
 
 ## Running Tests
 
