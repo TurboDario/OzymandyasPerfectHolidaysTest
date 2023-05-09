@@ -1,4 +1,4 @@
-from behave import given, when, then, step
+from behave import step
 from weather_api.config import load_config
 from weather_api.weather import get_weather_data
 import time
